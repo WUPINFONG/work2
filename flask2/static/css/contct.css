@@ -1,0 +1,32 @@
+#message{
+	margin-left:30% ;
+	
+}
+.contact_from{
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:0.5em 0.6em ;
+	font-size:100%;
+	line-height:1.15;
+	width:500px ;
+	margin-bottom:50px;
+
+}
+.form-group{
+	font-size: 20px;
+	margin:2%;
+
+}
+.form-control{
+font-size:30px;
+	font-weight:bold;
+}
+.subject{
+font-size: 30px;
+}
+.btn_submit{
+background-color:#0000ff ;
+	color:#ffffff;
+	padding:0.5em 1em;
+	border:transparent;/*邊框縣整個透明*/
+}

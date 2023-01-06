@@ -1,0 +1,35 @@
+{% extends "BasePage.html" %}
+
+{% block pageTitle %}
+我的訂單記錄
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/cart.css" />
+{% endblock %}
+
+{% block mainContent %}
+
+	<div style="margin-top:50px;"></div>
+
+	<div id="maindiv">
+		<p class="title"style="margin-left:38.9% ;font-size: 30px;">我的訂單記錄</p>
+
+		<table width="90%" border="0" align="center" cellpadding="4" cellspacing="1">
+			<tr>
+				<th bgcolor="#cccccc">訂單日期</th>
+				<th width="100" bgcolor="#cccccc">總額</th>
+				<th width="100" bgcolor="#cccccc">付款方式</th>
+			</tr>
+
+			{% for unit in order %}
+			<tr>
+				<td align="center">{{unit.create_date}}</td>
+				<td align="center">{{unit.grandtotal}}</td>
+				<td align="center">{{unit.paytype}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "BasePage.html" %}
+
+{% block pageTitle %}
+會員登入
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/member.css" />
+{% endblock %}
+
+{% block mainContent %}
+
+	<div style="margin-top:50px"></div>
+
+	<div id="message">
+	<p class="subject">會員登入</p>	
+
+	<center><p style="color:#ff0000">{{msg}}</p></center>
+
+	<form action="" method="post">
+		{% csrf_token %}
+		<table width="50%" border="0">
+			<tr>
+				<td><label>帳號：</label></td>
+				<td><input type="email" name="email" required placeholder="請輸入Email" /></td>
+			</tr>
+
+			<tr>
+				<td><label>密碼：</label></td>
+				<td><input type="password" name="password" required /></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<button type="submit">登入</button>
+					<a href="/register">註冊</a>
+
+				</td>
+				
+			</tr>
+		</table>
+		
+
+	</form>
+
+</div>
+
+{% endblock %}

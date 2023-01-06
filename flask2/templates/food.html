@@ -1,0 +1,37 @@
+{% extends 'base2.html' %}
+{% block pageTitle %}
+美食
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/food.css')}}">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block mainContent %}
+<div class='food'>
+	<p>美食查詢</p>
+<form  class='contact_from' action="/food" method="get">
+	<p></p>
+			商店:<input type="text" name="item" style="font-size: 20px; font-weight:bold;"/>
+			<p></p>
+			地址:<input type="text" name="p" style="font-size: 20px; font-weight:bold;"/>
+			<p></p>
+			<input type="submit" style="font-size:20px; margin-left:45px;" value="查詢"> 
+			<p></p>  
+</from>
+</div>
+
+	{% for row in result %}
+	<div class="info">
+		<a href="{{row[2]}}" target="_blank">
+			<img src="{{ url_for('static',filename='images/004.jpg')}}">
+		</a>
+			<p>{{row[1]}}</P>
+			<span>{{row[3]}}</span>
+	</div>
+	{% endfor %}
+
+
+
+{% endblock %} 

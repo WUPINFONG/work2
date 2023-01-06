@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		{% block pageTitle %}
+		{% endblock %}
+	</title>
+	
+	<link href="/static/css/index.css" rel="stylesheet">
+
+	{% block css %}
+
+	{% endblock %}
+
+	{% block js %}
+	{% endblock %}
+
+</head>
+<body>
+
+	<div id="wrapper">
+
+		<div id="banner">
+
+			<div id="logo">
+			</div>
+			<div id="menu">
+				<ul class="bannermenu">
+					<a href="/abouts"><li class="menutxt">關於我們</li></a>
+					<a href="/news"><li class="menutxt">新聞媒體</li></a>
+					<a href="/product"><li class="menutxt">產品服務</li></a>
+					<a href="/hotel"><li class="menutxt">住宿查詢</li></a>
+					<a href="/message"><li class="menutxt">聯絡我們</li></a>
+					{% if request.session.isAlive %}
+
+						<a href="/member"><li class="menutxt">會員管理</li></a>
+						<a href="/myorder"><li class="menutxt">我的訂單</li></a>
+						<a href="/logout"><li class="menutxt">登出</li></a>
+
+					{% else %}
+						<a href="/login"><li class="menutxt">會員登入</li></a>
+					{% endif %}
+				</ul>
+			</div>
+
+		</div>
+
+		<div id="ad">
+			<img src="/static/images/002.jpg" >
+		</div>
+
+		<div id="content">
+
+			{% block mainContent %}
+			{% endblock %}
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<span>COPYRIGHT ©2022 WATSON DESGIN.  ALL RIGHTS RESERVED.</span>
+	</div>
+
+</body>
+</html>

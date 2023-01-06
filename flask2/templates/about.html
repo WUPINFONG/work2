@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+{% block pageTitle %}
+關於我們
+{% endblock %}
+
+{% block css %}
+<link href="{{url_for('static',filename='css/about.css')}}" rel="stylesheet"></link>
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block mainContent %}
+<div id="about">
+	<h3>關於本網站</h3>
+	<p>本網站是因為現代人之忙碌所創建出來的</p>
+	<p>因為現代資訊之發達，所以想不到的事情上網收尋一下就有了，可是吃飯這件事情可不是收尋一下就可以</p>
+	<p>因現代人逐漸健康意識，所以本網站有收集一些動手做料理食譜提供參考</p>
+</div>	
+{% endblock %} 

@@ -1,0 +1,88 @@
+
+body{
+	width: 100%;
+	height: 100%;
+	font-family: 微軟正黑體,sans-serif,Arial;
+	font-size: 16px;
+	margin: 0px;
+}
+
+#wrapper{
+	min-height: 100%;
+	margin-bottom:-50px ;
+}
+#banner{
+	width: 100%;
+	height: 83px;
+}
+#ad{
+	width: 100%;
+	height: 300px;
+}
+#ad img{
+	width: 100%;
+	height: 200px;
+}
+#footer{
+	clear: both;
+	height: 50px;
+	background-color:#006b93 ;
+	clear: #fffffff;
+}
+.menutxt{
+	font-weight: 800;
+	color: rgb(0,110,147);
+
+}
+#menu a{
+	text-decoration: none;
+
+}
+#footer span{
+	color: #ffffff;
+	width: 50%;
+	margin-left:30% ;
+	line-height: 50px;
+}
+
+
+#logo{
+	width: 200px;
+	height: 71px;
+	background:url('../images/0001.jpg') no-repeat;/*不要重複*/
+	float: left;
+	margin-left:50px ;
+	margin-top: 10px;
+}
+#menu{
+
+	float: left;
+	width: 70%;
+	margin-top: 30px;
+
+}
+#menu li{
+	float: left;
+	list-style: none;
+	padding-right:1em;
+	padding-right:1em ;
+}
+#menu ul{
+
+}
+#content{
+	
+	height: 100%;
+}
+#menu a{
+	text-decoration: none;
+	
+}
+#content{
+	height:100%;
+}
+#content a{
+	text-decoration: none;
+	color: #000000;
+}
+

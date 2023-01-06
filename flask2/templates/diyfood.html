@@ -1,0 +1,48 @@
+{% extends 'base2.html' %}
+{% block pageTitle %}
+動手做美食
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/food.css')}}">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block mainContent %}
+
+<div class='food'>
+	<p>動手做美食</p>
+<form action="/diyfood" class='contact_from' method="get">
+	<p></p>
+菜名:<input type="text" name="item" style="font-size: 20px; font-weight:bold;"/>
+			<p></p>
+食材:<input type="text" name="p" style="font-size: 20px; font-weight:bold;"/>
+			<p></p>
+<input type="submit" style="font-size:20px; margin-left:45px;" value="查詢"> 
+			<p></p>  
+</form>
+</div>
+	
+<div class=maintable style="margin-right:50px; margin-left: 50px;">
+		
+
+		<table width="100%" border="1" align="center" cellpadding="4" cellspacing="1">
+			<tr>
+				<th width="35%" bgcolor="#cccccc" align="center">菜名</th>
+				<th width="65%" bgcolor="#cccccc" align="center">食材</th>
+				
+			</tr>
+			{% for row in result %}
+			<tr >
+				<th >
+				<a href="{{row[2]}}" target="_blank">
+				{{row[1]}}
+				</a >
+				</th>
+				<th >{{row[3]}}</th>
+				
+			</tr>
+			{% endfor %}
+		</table>	
+</div>
+{% endblock %} 

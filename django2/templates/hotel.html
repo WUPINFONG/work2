@@ -1,0 +1,70 @@
+{% extends "BasePage.html" %}
+
+{% block pageTitle %}
+住宿查詢
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/hotel1.css" />
+
+{% endblock %}
+
+{% block mainContent %}
+<form action="/hotel" method="get">
+	商品類別:<select name="item">
+				<option value="0">請選擇....</option>
+				<option value="1">台北</option>
+				<option value="2">新北</option>
+				<option value="3">桃園</option>
+				<option value="4">新竹</option>
+				<option value="5">苗栗</option>
+				<option value="6">台中</option>
+				<option value="7">彰化</option>
+				<option value="8">雲林</option>
+				<option value="9">嘉義</option>
+				<option value="10">台南</option>
+				<option value="11">高雄</option>
+				<option value="12">屏東</option>
+				<option value="13">台東</option>
+				<option value="14">花蓮</option>
+				<option value="15">宜蘭</option>
+				<option value="16">基隆</option>
+				<option value="17">南投</option>
+				
+
+			</select>
+			<p></p>
+			旅館名稱:<input type="text" name="p" style="font-size: 20px;"/>
+			<p></p>
+<input type="submit" style="font-size:20px;" value="查詢"> 
+			<p></p> 
+		<div class='HotelArea'>
+		{% for row in allHotel %}
+
+			<div class='info'>
+				<a href='{{row.link}}' target='_blank'>
+					<img src='{{row.photo}}'>
+				</a>
+				<p>{{row.title}}</p>
+				<span>{{row.content}}</span>
+			</div>
+		{% endfor %}
+	</div> 
+	<div style="float:left;height:100px;padding-top:50px;padding-left: 45%;">
+		{% if allHotel.has_previous %}
+
+			<a href="?page={{allHotel.previous_page_number}}&p={{keyword}}&item={{items}}">上一頁</a>
+
+		{% endif %}
+
+		{% if allHotel.has_next %}
+
+		<a href="?page={{allHotel.next_page_number}}&p={{keyword}}&item={{items}}">下一頁</a>
+
+		{% endif %}
+	</div>
+
+	<div stype="clear:both">
+	</div>
+
+{% endblock %}

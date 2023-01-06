@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		{% block pageTitle %}
+		{% endblock %}
+	</title>
+	<link href="/static/css/index.css" rel="stylesheet">
+
+	{% block css %}
+	{% endblock %}
+
+	{% block js %}
+	{% endblock %}
+</head>
+<body>
+<div id="wrapper">
+		<div id="banner">
+			<div id='logo'>
+			</div>
+			<div id='menu'>
+				<ul class='bannermenu'>
+					<ul>
+						<a href="/about"><li class='menutxt'>關於我們</li></a>
+						<a href="/news"><li class='menutxt'>新聞</li></a>
+						<a href="/diyfood"><li class='menutxt'>商品</li></a>
+						<a href="/foodupdata"><li class='menutxt'>美食新增</li></a>
+						<a href="/contact"><li class='menutxt'>聯絡我們</li></a>
+						
+					</ul>				
+				</div>
+		</div>
+	</div>
+	<div id="ad">
+		<img src="/static/images/ad.jpg" rel='stylesheet'>
+	</div>
+	<div id="content">
+		{% block mainContent %}
+		{% endblock %} 
+	</div>
+	<div id="footer">
+		<span> COPYTIGHT ©2022 WU DESGIN. ALL RIGHTS RESERVED. </span>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>
